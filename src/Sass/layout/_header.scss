@@ -1,0 +1,47 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+header {
+    background-color: $header-background-color;
+    color: $header-text-color;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $primary-border;
+
+    .header-section {
+        display: flex;
+        align-items: center;
+
+        .header-left-item, .header-right-item, .os-menu-header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-left-item, .header-right-item {
+            padding-right: 6px;
+            padding-left: 6px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            height: 19px;
+        }
+
+        // Borders so header items are separated
+        .header-left-item {
+            border-right: $primary-border;
+        }
+
+        .header-right-item {
+            border-left: $primary-border;
+        }
+
+        .header-icon {
+            padding-left: 5px;
+        }
+
+        .header-fullscreen {
+            @include breakpoint(phone) {
+                display: none;
+            }
+        }
+    }
+}

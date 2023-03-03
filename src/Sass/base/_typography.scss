@@ -1,0 +1,19 @@
+@import ".././abstracts/variables";
+ 
+// Definy styles for body text 
+body {
+    font-family: $primary-font-stack;
+    font-size: $primary-font-size;
+    font-weight: $font-weight-regular;
+    color: $primary-text-color;
+}
+
+header {
+    font-size: $secondary-font-size;
+    font-weight: $font-weight-bold;
+}
+
+li {
+    font-size: $secondary-font-size;
+    font-weight: $font-weight-regular;
+}

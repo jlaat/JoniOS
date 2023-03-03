@@ -1,0 +1,22 @@
+@import "../abstracts/variables";
+// Dropdown menu for the header
+.open-menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    .open-menu-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $header-background-color;
+        padding: 4px 6px;
+        border-bottom: $primary-border;
+        border-right: $primary-border;
+        min-width: 104px;
+    }
+
+    .list-item-icon {
+        transform: rotateZ(-90deg);
+    }
+}
