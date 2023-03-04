@@ -13,6 +13,12 @@
 
     span {
         font-size: $secondary-font-size;
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-regular;
+    }
+}
+.shortcut:focus {
+    span {
+        background-color: black;
+        color: white;
     }
 }
