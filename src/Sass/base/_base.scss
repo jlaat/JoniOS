@@ -9,6 +9,10 @@ ol {
   padding: 0;
 }
 
+// Content to full height
+html, body, #root, .App {
+    height: 100%;
+}
 // Global box sizing
 *, *:before, *:after{
     box-sizing: border-box;

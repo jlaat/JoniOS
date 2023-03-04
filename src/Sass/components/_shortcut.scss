@@ -1,0 +1,18 @@
+@import "../abstracts/variables";
+
+.shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    span {
+        font-size: $secondary-font-size;
+        font-weight: $font-weight-light;
+    }
+}
