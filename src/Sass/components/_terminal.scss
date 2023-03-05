@@ -1,0 +1,48 @@
+@import "../abstracts/variables";
+
+
+.terminal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 30%;
+
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+
+    border: $primary-border;
+    border-radius: 5px;
+
+    // Little padding around the terminal
+    .terminal-body, .terminal-input, .terminal-header {
+        padding: 5px;
+    }
+
+    // Header
+    .terminal-header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $header-background-color;
+    }
+
+    // Dark background for everything except header
+    .terminal-body, .terminal-input, .terminal-input-content {
+        background-color: $primary-background-color;
+        color: $pale-white;
+    }
+
+    // Reset input field styles
+    .terminal-input-content {
+        border: none;
+        font-size: $primary-font-size;
+    }
+    .terminal-input-content:focus {
+        outline: none;
+    }
+
+    // Make prompt beginning nice green
+    .terminal-input-prompt {
+        color: $worn-green;
+    }
+}
