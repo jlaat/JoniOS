@@ -1,18 +1,31 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
+// Round top borders
+.terminal, .terminal-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 
 .terminal {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 10%;
+    left: 30%;
     width: 40%;
-    height: 30%;
+    height: 40%;
+    overflow-y: scroll;
+    color: $pale-white;
 
-    display: grid;
-    grid-template-rows: 1fr 10fr;
 
-    border: $primary-border;
-    border-radius: 5px;
+
+    background-color: $primary-background-color;
+
+    @include breakpoint(phone) {
+        width: 100%;
+        height: 50%;
+        top: 20%;
+        left: 1%;
+    }
 
     // Little padding around the terminal
     .terminal-body, .terminal-input, .terminal-header {
@@ -23,13 +36,26 @@
     .terminal-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: $header-background-color;
+        color: $header-text-color;
+        position: sticky;
+        top: 0;
+        width: 100%;
     }
+
 
     // Dark background for everything except header
     .terminal-body, .terminal-input, .terminal-input-content {
         background-color: $primary-background-color;
         color: $pale-white;
+    }
+
+    .terminal-input {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
     }
 
     // Reset input field styles
@@ -42,7 +68,17 @@
     }
 
     // Make prompt beginning nice green
-    .terminal-input-prompt {
+    .terminal-input-prompt, .terminal-input-clone {
         color: $worn-green;
+    }
+
+    .command-container {
+        padding-left: 3px;
+    }
+
+    .terminal-close {
+        height: 11px;
+        padding: 1px;
+        border: 0.5px solid gray;
     }
 }

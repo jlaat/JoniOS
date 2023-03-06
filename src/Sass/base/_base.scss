@@ -12,6 +12,7 @@ ol {
 // Content to full height
 html, body, #root, .App {
     height: 100%;
+    overflow: hidden;
 }
 // Global box sizing
 *, *:before, *:after{
