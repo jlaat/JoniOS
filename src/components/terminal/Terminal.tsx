@@ -59,6 +59,7 @@ const Terminal = (props: any) => {
 
   const closeTerminal = () => {
     props.setDisplay(false);
+    setHistory([]);
   };
 
   useEffect(() => {

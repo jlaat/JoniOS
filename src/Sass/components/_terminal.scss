@@ -16,12 +16,10 @@
     overflow-y: scroll;
     color: $pale-white;
 
-
-
     background-color: $primary-background-color;
 
     @include breakpoint(phone) {
-        width: 100%;
+        width: 98%;
         height: 50%;
         top: 20%;
         left: 1%;
@@ -63,7 +61,6 @@
     // Reset input field styles
     .terminal-input-content {
         border: none;
-        font-size: $primary-font-size;
     }
     .terminal-input-content:focus {
         outline: none;
