@@ -7,9 +7,10 @@ interface ExecutedCommand {
   output: string[];
 }
 
-const Terminal = () => {
+const Terminal = (props: any) => {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<ExecutedCommand[]>([]);
+  const [display, setDisplay] = useState(true);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(e.target.value);
@@ -56,6 +57,10 @@ const Terminal = () => {
     }
   };
 
+  const closeTerminal = () => {
+    props.setDisplay(false);
+  };
+
   useEffect(() => {
     scrollTerminalToBottom();
   }, [history]);
@@ -75,32 +80,29 @@ const Terminal = () => {
       className="terminal"
       onKeyDown={handleEnterPressed}
       onClick={giveInputFocus}
+      style={{ display: props.display ? "block" : "none" }}
     >
       <div className="terminal-header">
         <span>opaa</span>
         <span>you@joniOS</span>
-        <img src={Ruksi} className="terminal-close" />
+        <img src={Ruksi} className="terminal-close" onClick={closeTerminal} />
       </div>
 
       {history.map((command, index) => (
         <div className="command-container" key={index}>
-          <span className="terminal-input-prompt">
-            <br />
-            you@joniOS:~${" "}
-          </span>
+          <span className="terminal-input-prompt">you@joniOS:~$ </span>
           <span>{command.command}</span>
           <br />
           <div className="command-container">
             {command.output.map((line) => {
               return (
                 <span>
-                  <br />
                   {line}
+                  <br />
                 </span>
               );
             })}
           </div>
-          <br />
         </div>
       ))}
 

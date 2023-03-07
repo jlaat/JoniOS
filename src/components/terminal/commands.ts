@@ -1,7 +1,7 @@
 const who: string[] = [
   "Hi, I'm Joni.",
   "I'm an IT student, career changer and a future software developer.",
-  "Changed career from a roofer to a software developer to put my passion for technology to good use. Best decision I've made.",
+  "I left constructions and roofing behind to put my passion for technology to good use. Best decision I've made.",
   "I find software development captivating due to the need for logical reasoning and the ability to craft something out of nothing by following a set of rules.",
   "I'm currently studying at the Karelia University of Applied Sciences.",
 ];

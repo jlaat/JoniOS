@@ -5,7 +5,11 @@ import ProjectsIcon from "../../assets/icons/projects.png";
 import TerminalIcon from "../../assets/icons/terminal.png";
 import { iconData } from "./icon_data";
 
-const Icons = () => {
+const Icons = (props: any) => {
+  const handleIconClick = () => {
+    props.renderTerminal(true);
+  };
+
   return (
     <div className="icons">
       {iconData.map((icon, index) => {
@@ -15,6 +19,7 @@ const Icons = () => {
             name={icon.name}
             icon={icon.icon}
             classOfComponent={icon.name.toLowerCase()}
+            handleClick={handleIconClick}
           />
         );
       })}

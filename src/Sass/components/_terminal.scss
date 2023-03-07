@@ -28,7 +28,7 @@
     }
 
     // Little padding around the terminal
-    .terminal-body, .terminal-input, .terminal-header {
+    .terminal-body, .terminal-header {
         padding: 5px;
     }
 
@@ -38,6 +38,7 @@
         justify-content: space-between;
         align-items: center;
         background-color: $header-background-color;
+        border: $primary-border;
         color: $header-text-color;
         position: sticky;
         top: 0;
@@ -56,6 +57,7 @@
         width: 100%;
         display: flex;
         align-items: center;
+        padding-left: 5px;
     }
 
     // Reset input field styles
@@ -72,10 +74,16 @@
         color: $worn-green;
     }
 
-    .command-container {
-        padding-left: 3px;
+    .terminal-input {
+        padding-bottom: 5px;
     }
 
+    .terminal-input-prompt, .terminal-input-clone, .command-container {
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 1.2;
+    }
+    
     .terminal-close {
         height: 11px;
         padding: 1px;
