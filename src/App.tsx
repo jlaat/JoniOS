@@ -12,8 +12,8 @@ function App() {
   const [displayGuestbook, setDisplayGuestbook] = useState(false);
   const [tabs, setTabs] = useState([
     { name: "terminal", zIndex: 1 },
-    { name: "projects", zIndex: 1 },
-    { name: "guestbook", zIndex: 1 },
+    { name: "projects", zIndex: 3 },
+    { name: "guestbook", zIndex: 2 },
   ]);
 
   // Logic behind tab z-indexes
@@ -45,7 +45,7 @@ function App() {
         zindex={tabs.find((tab) => tab.name === "terminal")?.zIndex}
       />
       <Projects
-        display={displayTerminal}
+        display={displayProjects}
         setDisplay={setDisplayProjects}
         zindex={tabs.find((tab) => tab.name === "projects")?.zIndex}
       />

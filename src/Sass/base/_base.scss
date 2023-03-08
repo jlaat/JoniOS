@@ -27,6 +27,11 @@ body {
     
 }
 
+// Box shadows
+.terminal, .projects, .guestbook {
+    box-shadow: inset -1px -1px 0 0 #c2b9b1,inset 1px 1px 0 0 #fff,5px 5px 0 #0003;
+}
+
 ol, ul{
     list-style: none;
 }

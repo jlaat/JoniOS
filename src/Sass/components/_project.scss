@@ -1,0 +1,77 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+.container-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+    gap: 2em;
+}
+.project-img {
+    flex: auto;
+    width: 50%;
+}
+
+.github-green {
+    height: 30px;
+}
+.right-project, .left-project {
+    flex:1;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-project {
+    align-items: flex-start;
+}
+.left-project, .header-project {
+    align-items: center;
+}
+.upper-right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    
+}
+.upper-right > img {
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+    align-self: center;
+}
+
+.list-techs {
+    align-self: center;
+    text-align: left;
+
+}
+.project-date {
+    color: #0DF;
+}
+@include breakpoint(phone) {
+    .container-project {
+        flex-direction: column;
+        gap: 0;
+    }
+    .project-img {
+        width: 50%;
+        min-height: 20vh;
+    }
+    .project-date, .list-techs {
+        align-self: center;
+    }
+    .upper-right {
+        justify-content: center;
+    }
+}
+li {
+    padding: 2px;
+}
+    
+.project-description {
+    align-self: center;
+}
+
+

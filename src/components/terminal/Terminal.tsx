@@ -26,7 +26,6 @@ const Terminal = (props: any) => {
           break;
         }
         case "who": {
-          console.log(commands[1]);
           addCommandToHistory({ command: input, output: commands[1] });
           break;
         }
@@ -104,9 +103,9 @@ const Terminal = (props: any) => {
             <span className="terminal-output">{command.command}</span>
             <br />
             <div className="command-container">
-              {command.output.map((line) => {
+              {command.output.map((line, index) => {
                 return (
-                  <span className="terminal-output">
+                  <span className="terminal-output" key={index}>
                     {line}
                     <br />
                   </span>

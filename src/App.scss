@@ -8,8 +8,16 @@
 @import "./Sass/components/_terminal";
 @import "./Sass/layout/_projects";
 @import "./Sass/components/_guestbook";
+@import "./Sass/components/_tabheader";
+@import "./Sass/components/_project";
 
 @font-face {
     font-family: "Chicago";
-    src: url(./fonts/chicago/ChicagoFLF.ttf) format("truetype");
+    src: url(./fonts/chicago/ChicagoFLF.ttf) format("truetype") ;
+    
+}
+
+@font-face {
+    font-family: "WakeUpNeo" ;
+    src: url(./fonts/white-rabbit/whitrabt.ttf) format("truetype") style("normal") stretch;
 }

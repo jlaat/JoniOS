@@ -27,3 +27,26 @@ li {
         font-family: Chicago;
     }
 }
+
+.projects {
+    font-size: $primary-font-size;
+    font-family: WakeUpNeo;
+    color: $retro-green-bright;
+    text-align: center;
+    @include breakpoint(phone) {
+        font-size:$secondary-font-size;
+    }
+}
+
+.tab-header {
+    font-family: Chicago;
+}
+
+.guestbook {
+    color: $primary-text-color;
+    font-weight: $font-weight-light;
+    .message-form {
+        color: $primary-text-color;
+        font-weight: $font-weight-light;
+    }
+}
