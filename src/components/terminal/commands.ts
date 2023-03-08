@@ -1,19 +1,16 @@
 const who: string[] = [
-  "Hi, I'm Joni.",
-  "I'm an IT student, career changer and a future software developer.",
-  "I left constructions and roofing behind to put my passion for technology to good use. Best decision I've made.",
+  "Meet Joni, a 24-year-old career changer and IT student who is pursuing his passion for technology as a future software developer.",
+  "After leaving my previous career in construction and roofing, I realized that my true calling lay in the world of programming.",
   "",
-  "I find software development captivating due to the need for logical reasoning and the ability to craft something out of nothing by following a set of rules.",
+  "What I find most captivating about software development is the challenging yet rewarding process of logical reasoning and problem-solving. Crafting something out of nothing by following a set of rules is not only satisfying, but also requires a deep understanding of the language and tools used in the development process.",
   "",
-  "I'm currently studying at the Karelia University of Applied Sciences.",
+  "Currently, I am studying at the Karelia University of Applied Sciences, where I am gaining the skills and knowledge necessary to excel in this exciting field. I am excited for the opportunities that lie ahead and am committed to pursuing a successful career as a software developer.",
 ];
 
 const skills: string[] = [
   "I see myself as a great systematic thinker with good working life skills.",
   "",
-  "What comes to my programming skills, I'm constantly trying and learning skills that I find interesting and fun. It is important for me that coding is fun. Lately I've been mostly exposed to TypeScript and Java.",
-  "",
-  "Since 09/2021 I've been learning different aspects of software development very widely.",
+  "What comes to my programming skills, I'm constantly trying and learning technologies that I find interesting and fun. It is important for me that coding is fun. Lately I've been mostly exposed to TypeScript, MariaDB and Java.",
 ];
 
 const help: string[] = [

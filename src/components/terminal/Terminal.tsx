@@ -89,26 +89,35 @@ const Terminal = (props: any) => {
         <img src={Ruksi} className="terminal-close" onClick={closeTerminal} />
       </div>
 
-      {history.map((command, index) => (
-        <div className="command-container" key={index}>
-          <span className="terminal-input-prompt">you@joniOS:~$ </span>
-          <span>{command.command}</span>
-          <br />
-          <div className="command-container">
-            {command.output.map((line) => {
-              return (
-                <span>
-                  {line}
-                  <br />
-                </span>
-              );
-            })}
+      <div>
+        <span className="terminal-introduction terminal-output">
+          type help and press enter to get list of commands.
+        </span>
+        {history.map((command, index) => (
+          <div className="command-container" key={index}>
+            <span className="terminal-input-prompt green-section">
+              you@joniOS:~${""}
+            </span>
+            <span className="terminal-output">{command.command}</span>
+            <br />
+            <div className="command-container">
+              {command.output.map((line) => {
+                return (
+                  <span className="terminal-output">
+                    {line}
+                    <br />
+                  </span>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <div className="terminal-input">
-        <span className="terminal-input-prompt">you@joniOS:~$</span>
+        <span className="terminal-input-prompt green-section">
+          you@joniOS:~$
+        </span>
         <input
           className="terminal-input-content"
           type="text"

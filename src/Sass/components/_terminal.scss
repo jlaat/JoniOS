@@ -26,7 +26,7 @@
     }
 
     // Little padding around the terminal
-    .terminal-body, .terminal-header {
+    .terminal-header {
         padding: 5px;
     }
 
@@ -34,6 +34,7 @@
     .terminal-header {
         display: flex;
         justify-content: space-between;
+        padding-right: 7px;
         align-items: center;
         background-color: $header-background-color;
         border: $primary-border;
@@ -43,42 +44,38 @@
         width: 100%;
     }
 
-
     // Dark background for everything except header
-    .terminal-body, .terminal-input, .terminal-input-content {
+     .terminal-input, .terminal-input-content, .command-container, .terminal-introduction {
         background-color: $primary-background-color;
         color: $pale-white;
+        padding: 4px;
     }
+
 
     .terminal-input {
         position: absolute;
         width: 100%;
         display: flex;
         align-items: center;
-        padding-left: 5px;
+    }
+
+    .terminal-output {
+        line-height: 1.2;
     }
 
     // Reset input field styles
-    .terminal-input-content {
+    .terminal-input-content, .terminal-output {
         border: none;
+        padding: 2px;
     }
     .terminal-input-content:focus {
         outline: none;
     }
 
     // Make prompt beginning nice green
-    .terminal-input-prompt, .terminal-input-clone {
+    .green-section {
         color: $worn-green;
-    }
 
-    .terminal-input {
-        padding-bottom: 5px;
-    }
-
-    .terminal-input-prompt, .terminal-input-clone, .command-container {
-        padding-left: 5px;
-        padding-right: 5px;
-        line-height: 1.2;
     }
     
     .terminal-close {

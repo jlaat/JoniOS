@@ -7,12 +7,7 @@ interface IconProps {
   handleClick: () => void;
 }
 
-const Icon: React.FC<IconProps> = ({
-  name,
-  icon,
-  classOfComponent,
-  handleClick,
-}) => {
+const Icon: React.FC<IconProps> = ({ name, icon, handleClick }) => {
   const [display, setDisplay] = useState(false);
   const [timesClicked, setTimesClicked] = useState(0);
 
