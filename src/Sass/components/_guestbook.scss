@@ -1,0 +1,15 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.guestbook {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 90%;
+    overflow-y: scroll;
+    color: $pale-white;
+
+    background-color: green;
+    border: 1px solid black;
+}

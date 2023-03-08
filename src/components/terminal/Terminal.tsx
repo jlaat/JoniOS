@@ -81,7 +81,10 @@ const Terminal = (props: any) => {
       className="terminal"
       onKeyDown={handleEnterPressed}
       onClick={giveInputFocus}
-      style={{ display: props.display ? "block" : "none" }}
+      style={{
+        display: props.display ? "block" : "none",
+        zIndex: props.zindex,
+      }}
     >
       <div className="terminal-header">
         <span>opaa</span>

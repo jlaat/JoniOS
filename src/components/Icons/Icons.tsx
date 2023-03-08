@@ -17,6 +17,7 @@ const Icons = (props: any) => {
             classOfComponent={icon.name.toLowerCase()}
             handleClick={() => {
               props[`render${icon.name}`](true);
+              props.handleSetActiveTab(icon.name.toLowerCase());
             }}
           />
         );
