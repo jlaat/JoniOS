@@ -10,6 +10,7 @@ The app includes the following features:
     1. Desktop with icons to open apps, a clock, fullscreen toggle...
     2. A terminal app that can be used to run commands
     3. A projects app that lists my projects
+    4. A guestbook app that allows users to leave messages
 
 
 ## Technologies
@@ -19,4 +20,5 @@ The app was built with the following technologies:
     - React.js
     - SCSS
     - TypeScript
+    - MongoDB
 
