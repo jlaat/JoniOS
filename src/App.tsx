@@ -8,7 +8,7 @@ import Guestbook from "./components/guestbook/Guestbook";
 
 function App() {
   const [displayTerminal, setDisplayTerminal] = useState(false);
-  const [displayProjects, setDisplayProjects] = useState(true);
+  const [displayProjects, setDisplayProjects] = useState(false);
   const [displayGuestbook, setDisplayGuestbook] = useState(false);
   const [tabs, setTabs] = useState([
     { name: "terminal", zIndex: 1 },

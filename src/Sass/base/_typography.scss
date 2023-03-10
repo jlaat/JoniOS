@@ -50,3 +50,14 @@ li {
         font-weight: $font-weight-light;
     }
 }
+
+.message {
+    color: $primary-text-color;
+    font-family: WakeUpNeo;
+    font-size: $secondary-font-size;
+
+    b {
+        font-family: Chicago;
+        font-size: $primary-font-size;
+    }
+}

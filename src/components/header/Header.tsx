@@ -6,8 +6,20 @@ const Header = () => {
   const [time, setTime] = useState(new Date());
   const [openMenu, setOpenMenu] = useState(false);
 
+  const currentDate = new Date().toLocaleDateString("en-GB");
+
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
+  };
+
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
   };
 
   return (
@@ -19,14 +31,17 @@ const Header = () => {
         </div>
       </div>
       <div className="header-right header-section">
-        <div className="header-fullscreen header-right-item clickable">
+        <div
+          className="header-fullscreen header-right-item clickable"
+          onClick={toggleFullScreen}
+        >
           <img src={fullscreenIcon} className="header-icon" />
           <span className="header-fullscreen-text hide-mobile">Fullscreen</span>
         </div>
         <span className="header-clock header-right-item">
           {`${time.getHours()}:${time.getMinutes()}`}
         </span>
-        <span className="header-date header-right-item">Fri 3 Mar 2023</span>
+        <span className="header-date header-right-item">{currentDate}</span>
       </div>
       {/*This is the menu that opens when menu is clicked*/}
       {openMenu ? (

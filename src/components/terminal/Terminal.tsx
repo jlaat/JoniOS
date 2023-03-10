@@ -38,6 +38,14 @@ const Terminal = (props: any) => {
           setInput("");
           break;
         }
+        default: {
+          addCommandToHistory({
+            command: input,
+            output: ["command not found"],
+          });
+          setInput("");
+          break;
+        }
       }
     }
   };
