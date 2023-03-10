@@ -7,11 +7,10 @@ Feel free to explore the website at [https://jonilaatikainen.com](https://jonila
 
 The app includes the following features:
 
-    1. Desktop with icons and wallpaper
-    2. Start menu with options to open apps
-    3. About Me app with information about me and my skills
-    4. Projects app with a list of my recent projects
-    5. Contact app with a contact form
+    1. Desktop with icons to open apps, a clock, fullscreen toggle...
+    2. A terminal app that can be used to run commands
+    3. A projects app that lists my projects
+
 
 ## Technologies
 
