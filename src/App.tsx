@@ -10,6 +10,7 @@ function App() {
   const [displayTerminal, setDisplayTerminal] = useState(false);
   const [displayProjects, setDisplayProjects] = useState(false);
   const [displayGuestbook, setDisplayGuestbook] = useState(false);
+
   const [tabs, setTabs] = useState([
     { name: "terminal", zIndex: 1 },
     { name: "projects", zIndex: 3 },

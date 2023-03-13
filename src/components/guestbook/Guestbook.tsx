@@ -34,10 +34,14 @@ const Guestbook = (props: any) => {
     event.preventDefault();
   };
 
+  // Add quest and update the list of guests
   const addGuest = () => {
     axios
       .post("https://evening-inlet-68124.herokuapp.com/guests", guest)
-      .then((response) => {})
+      .then((response) => {
+        setGuests([...guests, response.data]);
+        setGuest({ name: "", message: "" });
+      })
       .catch((error) => console.error(error));
   };
 

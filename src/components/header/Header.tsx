@@ -48,15 +48,18 @@ const Header = () => {
         <div className="open-menu">
           <ul className="open-menu-list">
             <li className="open-menu-list-item clickable">
-              nonni
+              <a href="https://github.com/JLaat" target="_blank">
+                Github
+              </a>
               <img src={arrowIcon} className="list-item-icon" />
             </li>
             <li className="open-menu-list-item clickable">
-              nonni
-              <img src={arrowIcon} className="list-item-icon" />
-            </li>
-            <li className="open-menu-list-item clickable">
-              nonni
+              <a
+                href="https://www.linkedin.com/in/joni-laatikainen-a5061a221/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
               <img src={arrowIcon} className="list-item-icon" />
             </li>
           </ul>

@@ -35,7 +35,7 @@ export const ongoingProjects: Project[] = [
   {
     title: "PortfolioV2",
     date: "03/2023",
-    description: "New portfolio made with React and TypeScript",
+    description: "New portfolio I started to create with React and TypeScript",
     techs: ["React", "TypeScript"],
     githubLink: "https://github.com/JLaat/portfoliov2",
   },
@@ -73,7 +73,7 @@ export const pastProjects: Project[] = [
   {
     title: "Calculator",
     date: "01/2021",
-    description: "Calculator made with JavaScript",
+    description: "Simple calculator made with JavaScript",
     techs: ["JavaScript", "HTML", "CSS"],
     githubLink: "https://github.com/JLaat/Calculator",
   },
