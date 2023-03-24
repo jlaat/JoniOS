@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Draggable from "react-draggable";
 import TabHeader from "../tabheader/TabHeader";
 import Message from "./Message";
 import axios from "axios";
@@ -46,37 +47,39 @@ const Guestbook = (props: any) => {
   };
 
   return (
-    <div
-      className="guestbook"
-      style={{
-        display: props.display ? "block" : "none",
-        zIndex: props.zindex,
-      }}
-    >
-      <TabHeader
-        tabName="Guestbook"
-        ruksiClicked={() => {
-          props.setDisplay(false);
+    <Draggable>
+      <div
+        className="guestbook"
+        style={{
+          display: props.display ? "block" : "none",
+          zIndex: props.zindex,
         }}
-      />
-      <form className="message-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" onChange={inputChanged} />
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" onChange={textareaChanged} />
-        <button onClick={addGuest}>Send me a message</button>
-      </form>
-      <div className="messages">
-        {guests.map((guest, index) => (
-          <Message
-            key={index}
-            name={guest.name}
-            message={guest.message}
-            date={guest.date}
-          />
-        ))}
+      >
+        <TabHeader
+          tabName="Guestbook"
+          ruksiClicked={() => {
+            props.setDisplay(false);
+          }}
+        />
+        <form className="message-form" onSubmit={handleSubmit}>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" onChange={inputChanged} />
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" onChange={textareaChanged} />
+          <button onClick={addGuest}>Send me a message</button>
+        </form>
+        <div className="messages">
+          {guests.map((guest, index) => (
+            <Message
+              key={index}
+              name={guest.name}
+              message={guest.message}
+              date={guest.date}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </Draggable>
   );
 };
 

@@ -21,7 +21,11 @@
     }
 
     .header-projects {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $retro-green-dark;
         border: $green-border;
+        padding: 4px;
     }
 }

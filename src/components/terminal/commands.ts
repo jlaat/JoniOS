@@ -13,6 +13,12 @@ const skills: string[] = [
   "What comes to my programming skills, I'm constantly trying and learning technologies that I find interesting and fun. It is important for me that coding is fun. Lately I've been mostly exposed to TypeScript, MariaDB and Java.",
 ];
 
+const contact: string[] = [
+  "Email: jonilaatikainen@protonmail.com",
+  "",
+  "Phone: +358 40 545 2601",
+];
+
 const help: string[] = [
   "[command]" + "\xa0\xa0\xa0" + " [description]",
   "",
@@ -28,6 +34,10 @@ const help: string[] = [
     "clear" +
     "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0" +
     " Clear the terminal",
+  "\xa0\xa0\xa0\xa0\xa0" +
+    "contact" +
+    "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" +
+    " Contact information",
 ];
 
 export const commands = [help, who, skills];

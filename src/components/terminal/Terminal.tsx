@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { commands } from "./commands";
+import Draggable from "react-draggable";
 import Ruksi from "../.././assets/icons/ruksi.png";
 
 interface ExecutedCommand {
@@ -84,58 +85,60 @@ const Terminal = (props: any) => {
   };
 
   return (
-    <div
-      className="terminal"
-      onKeyDown={handleEnterPressed}
-      onClick={giveInputFocus}
-      style={{
-        display: props.display ? "block" : "none",
-        zIndex: props.zindex,
-      }}
-    >
-      <div className="terminal-header">
-        <span>opaa</span>
-        <span>you@joniOS</span>
-        <img src={Ruksi} className="terminal-close" onClick={closeTerminal} />
-      </div>
+    <Draggable handle=".terminal-header">
+      <div
+        className="terminal"
+        onKeyDown={handleEnterPressed}
+        onClick={giveInputFocus}
+        style={{
+          display: props.display ? "block" : "none",
+          zIndex: props.zindex,
+        }}
+      >
+        <div className="terminal-header">
+          <span>opaa</span>
+          <span>you@joniOS</span>
+          <img src={Ruksi} className="terminal-close" onClick={closeTerminal} />
+        </div>
 
-      <div>
-        <span className="terminal-introduction terminal-output">
-          type help and press enter to get list of commands.
-        </span>
-        {history.map((command, index) => (
-          <div className="command-container" key={index}>
-            <span className="terminal-input-prompt green-section">
-              you@joniOS:~${""}
-            </span>
-            <span className="terminal-output">{command.command}</span>
-            <br />
-            <div className="command-container">
-              {command.output.map((line, index) => {
-                return (
-                  <span className="terminal-output" key={index}>
-                    {line}
-                    <br />
-                  </span>
-                );
-              })}
+        <div>
+          <span className="terminal-introduction terminal-output">
+            type help and press enter to get list of commands.
+          </span>
+          {history.map((command, index) => (
+            <div className="command-container" key={index}>
+              <span className="terminal-input-prompt green-section">
+                you@joniOS:~${""}
+              </span>
+              <span className="terminal-output">{command.command}</span>
+              <br />
+              <div className="command-container">
+                {command.output.map((line, index) => {
+                  return (
+                    <span className="terminal-output" key={index}>
+                      {line}
+                      <br />
+                    </span>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="terminal-input">
-        <span className="terminal-input-prompt green-section">
-          you@joniOS:~$
-        </span>
-        <input
-          className="terminal-input-content"
-          type="text"
-          value={input}
-          onChange={handleInputChange}
-        />
+        <div className="terminal-input">
+          <span className="terminal-input-prompt green-section">
+            you@joniOS:~$
+          </span>
+          <input
+            className="terminal-input-content"
+            type="text"
+            value={input}
+            onChange={handleInputChange}
+          />
+        </div>
       </div>
-    </div>
+    </Draggable>
   );
 };
 
