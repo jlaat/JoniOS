@@ -14,6 +14,7 @@ const skills: string[] = [
 ];
 
 const contact: string[] = [
+  "",
   "Email: jonilaatikainen@protonmail.com",
   "",
   "Phone: +358 40 545 2601",

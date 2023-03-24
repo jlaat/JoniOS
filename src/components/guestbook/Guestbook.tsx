@@ -47,7 +47,7 @@ const Guestbook = (props: any) => {
   };
 
   return (
-    <Draggable>
+    <Draggable handle=".handle-guestbook">
       <div
         className="guestbook"
         style={{
@@ -56,6 +56,7 @@ const Guestbook = (props: any) => {
         }}
       >
         <TabHeader
+          handleClass="handle-guestbook"
           tabName="Guestbook"
           ruksiClicked={() => {
             props.setDisplay(false);

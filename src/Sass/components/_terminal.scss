@@ -48,7 +48,13 @@
      .terminal-input, .terminal-input-content, .command-container, .terminal-introduction {
         background-color: $primary-background-color;
         color: $pale-white;
-        padding: 4px;
+        margin-left: 4px;
+    }
+    .command-container, .terminal-input-content, .terminal-input {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        padding-bottom: 4px;
     }
 
 
@@ -66,7 +72,7 @@
     // Reset input field styles
     .terminal-input-content, .terminal-output {
         border: none;
-        padding: 2px;
+       margin-left: 4px;
     }
     .terminal-input-content:focus {
         outline: none;

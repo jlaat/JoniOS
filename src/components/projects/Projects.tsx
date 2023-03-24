@@ -11,7 +11,7 @@ import {
 
 const Projects = (props: any) => {
   return (
-    <Draggable>
+    <Draggable handle=".handle-projects">
       <div
         className="projects"
         style={{
@@ -20,6 +20,7 @@ const Projects = (props: any) => {
         }}
       >
         <TabHeader
+          handleClass="handle-projects"
           tabName="Projects"
           ruksiClicked={() => {
             props.setDisplay(false);
