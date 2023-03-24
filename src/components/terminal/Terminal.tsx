@@ -39,6 +39,10 @@ const Terminal = (props: any) => {
           setInput("");
           break;
         }
+        case "contact": {
+          addCommandToHistory({ command: input, output: commands[3] });
+          break;
+        }
         default: {
           addCommandToHistory({
             command: input,

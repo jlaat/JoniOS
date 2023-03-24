@@ -40,4 +40,4 @@ const help: string[] = [
     " Contact information",
 ];
 
-export const commands = [help, who, skills];
+export const commands = [help, who, skills, contact];
