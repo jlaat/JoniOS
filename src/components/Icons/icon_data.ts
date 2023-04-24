@@ -6,15 +6,15 @@ const iconPhotos = [GuestbookIcon, TerminalIcon, ProjectsIcon];
 
 export const iconData = [
   {
+    name: "Projects",
+    icon: iconPhotos[2],
+  },
+  {
     name: "Guestbook",
     icon: iconPhotos[0],
   },
   {
     name: "Terminal",
     icon: iconPhotos[1],
-  },
-  {
-    name: "Projects",
-    icon: iconPhotos[2],
   },
 ];

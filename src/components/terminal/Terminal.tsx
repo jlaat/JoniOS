@@ -105,7 +105,7 @@ const Terminal = (props: any) => {
           <img src={Ruksi} className="terminal-close" onClick={closeTerminal} />
         </div>
 
-        <div>
+        <div className="terminal-history">
           <span className="terminal-introduction terminal-output">
             type help and press enter to get list of commands.
           </span>
