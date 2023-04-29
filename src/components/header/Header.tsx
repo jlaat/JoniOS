@@ -6,6 +6,11 @@ const Header = () => {
   const [time, setTime] = useState(new Date());
   const [openMenu, setOpenMenu] = useState(false);
 
+  // Clock update interval
+  setInterval(() => {
+    setTime(new Date());
+  }, 60 * 100);
+
   const currentDate = new Date().toLocaleDateString("en-GB");
 
   const toggleMenu = () => {
