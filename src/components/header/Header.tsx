@@ -39,7 +39,9 @@ const Header = () => {
           <span className="header-fullscreen-text hide-mobile">Fullscreen</span>
         </div>
         <span className="header-clock header-right-item">
-          {`${time.getHours()}:${time.getMinutes()}`}
+          {`${time.getHours()}: ${
+            (time.getMinutes() < 10 ? "0" : "") + time.getMinutes()
+          }`}
         </span>
         <span className="header-date header-right-item">{currentDate}</span>
       </div>
