@@ -11,7 +11,7 @@ import {
 
 const Projects = (props: any) => {
   return (
-    <Draggable handle=".handle-projects">
+    <Draggable handle=".handle-projects" cancel=".tab-close">
       <div
         className="projects"
         style={{

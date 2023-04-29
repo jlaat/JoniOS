@@ -47,7 +47,7 @@ const Guestbook = (props: any) => {
   };
 
   return (
-    <Draggable handle=".handle-guestbook">
+    <Draggable handle=".handle-guestbook" cancel=".tab-close">
       <div
         className="guestbook"
         style={{

@@ -89,7 +89,7 @@ const Terminal = (props: any) => {
   };
 
   return (
-    <Draggable handle=".terminal-header">
+    <Draggable handle=".terminal-header" cancel=".terminal-close">
       <div
         className="terminal"
         onKeyDown={handleEnterPressed}
