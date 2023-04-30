@@ -22,24 +22,29 @@ const Terminal = (props: any) => {
   ): void => {
     if (e.key === "Enter") {
       switch (input) {
-        case "help": {
+        case "help":
+        case "Help": {
           addCommandToHistory({ command: input, output: commands[0] });
           break;
         }
-        case "who": {
+        case "who":
+        case "Who": {
           addCommandToHistory({ command: input, output: commands[1] });
           break;
         }
-        case "skills": {
+        case "skills":
+        case "Skills": {
           addCommandToHistory({ command: input, output: commands[2] });
           break;
         }
-        case "clear": {
+        case "clear":
+        case "Clear": {
           setHistory([]);
           setInput("");
           break;
         }
-        case "contact": {
+        case "contact":
+        case "Contact": {
           addCommandToHistory({ command: input, output: commands[3] });
           break;
         }
